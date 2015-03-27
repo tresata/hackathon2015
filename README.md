@@ -105,5 +105,14 @@ or
 
     > hadoop fs -ls /user/username
 
+## Data
+
+You can find the data on HDFS in the /data folder, which contains the full data set with/without headers, as well as a random sample.
+
+    /data/full
+    /data/full_no_header
+    /data/sample
+    /data/sample_no_header
+
 ## Resource Manager
 http://hackaton-master.datachambers.com:8088
