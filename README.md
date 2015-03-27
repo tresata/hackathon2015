@@ -46,6 +46,10 @@ If you'd like to create a file from the command, you can use a create table comm
 
     hive> create table test row format delimited fields terminated by '|' stored as textfile as select * from default.hackathon limit 10;
 
+You can then extract the table from the hive warehouse:
+
+    hadoop fs -text /user/hive/warehouse/test/*.snappy > textfile
+
 ## Spark
 
 Now give the Spark-shell a test:
