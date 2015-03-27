@@ -42,6 +42,10 @@ Try pasting the following query into the hive command-line interface:
 
 This will return all the fields for the first ten items in the 'hackathon' table.
 
+If you'd like to create a file from the command, you can use a create table command:
+
+    hive> create table test row format delimited fields terminated by '|' stored as textfile as select * from default.hackathon limit 10;
+
 ## Spark
 
 Now give the Spark-shell a test:
