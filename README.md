@@ -107,12 +107,17 @@ or
 
 ## Data
 
-You can find the data on HDFS in the /data folder, which contains the full data set with/without headers, as well as a random sample.
+You can find the data on HDFS in the /data folder, which contains the full data set with/without headers, as well as a random 1% sample.
 
     /data/full
     /data/full_no_header
     /data/sample
     /data/sample_no_header
+
+The sample files are also available on the local file system:
+
+    /home/shared/hackathon_data_sample.bsv
+    /home/shared/hackathon_data_sample_no_header.bsv
 
 ## Resource Manager
 http://hackaton-master.datachambers.com:8088
