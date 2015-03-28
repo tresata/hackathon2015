@@ -118,6 +118,11 @@ You can find the data on HDFS in the /data folder, which contains the full data 
     /data/full
     /data/full_no_header
 
+In hive the following tables are available:
+
+    hackathon: full data set
+    customer_sample: the 1% sample by customer
+
 The sample files are also available on the local file system:
 
     /home/shared/customer_sample.bsv
