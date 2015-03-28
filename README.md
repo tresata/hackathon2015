@@ -62,7 +62,7 @@ Now give the Spark-shell a test:
 
 Read in the data and run a simple query that calculates the number of purchases for each upc in the sample data:
 
-    val dataRDD = sc.textFile("/data/sample")
+    val dataRDD = sc.textFile("/data/customer_sample")
     val upcs = dataRDD.map(_.split("\\|")(12))
     val upcCounts = upcs.map(upc => (upc, 1)).reduceByKey((a, b) => a + b)
     upcCounts.take(10)
@@ -108,7 +108,7 @@ In addition to the Hive and Spark shells, we're also packaging Eval-tool, a tool
 
 you can run a query on the data set sample from the command-line:
 
-    > eval-tool test.scala --hdfs --input bsv%/data/sample --output bsv%upc_counts
+    > eval-tool test.scala --hdfs --input bsv%/data/customer_sample --output bsv%upc_counts
 
 This will generate a bar-separated file called 'upc_counts' in your HDFS home directory, containing the upc numbers along with their total counts.
 
