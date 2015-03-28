@@ -122,6 +122,7 @@ In hive the following tables are available:
 
     hackathon: full data set
     customer_sample: the 1% sample by customer
+    2c_ht_raw: full data set in faster ORC file format, created by Dave
 
 The sample files are also available on the local file system:
 
