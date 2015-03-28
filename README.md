@@ -5,7 +5,7 @@ Welcome to hackathon 2015!
 
 Download the kickoff deck for more information on the business problem, the hackathon agenda, the data, and more! Find it in the data folder:
 
-[Hackathon 2015 kickoff deck](http://www.github.com/tresata/hackathon2015/data/hackathon_kickoff_deck2015.pdf)
+[Hackathon 2015 kickoff deck](https://github.com/tresata/hackathon2015/blob/master/data/hackathon_kickoff_deck2015.pdf)
 
 ## Machines
 
