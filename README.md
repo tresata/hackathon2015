@@ -73,7 +73,7 @@ You can also do the same query using a python version of the Spark shell.
 
     > pyspark --num-executors 4 --executor-cores 2 --executor-memory 2G
 
-    dataRDD = sc.textFile("/data/sample")
+    dataRDD = sc.textFile("/data/customer_sample")
     upcs = dataRDD.map(lambda line: line.split('|')[12])
     upcCounts = upcs.map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
     upcCounts.take(10)
