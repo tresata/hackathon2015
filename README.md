@@ -71,7 +71,7 @@ Note that for your "production" run on the full dataset you might want to increa
 
     --num-executors 4 --executor-cores 4 --executor-memory 4G
 
-Keep in mind that a spark-shell takes up these resources even when you do not use them so please do not keep a spark-shell open unused.  
+Keep in mind that a spark-shell takes up these resources on the cluster even when you do not use them so please do not keep a spark-shell with "production" resources open unused.  
 
 ## pySpark
 
@@ -88,7 +88,7 @@ Note that for your "production" run on the full dataset you might want to increa
 
     --num-executors 4 --executor-cores 4 --executor-memory 4G
 
-Keep in mind that a spark-shell takes up these resources even when you do not use them so please do not keep a spark-shell open unused.  
+Keep in mind that a pyspark takes up these resources on the cluster even when you do not use them so please do not keep a pyspark interpreter with "production" resources open unused.  
 
 ## Scalding
 
