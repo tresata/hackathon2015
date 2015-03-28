@@ -58,7 +58,7 @@ You can then extract the table from the hive warehouse for a table named abc:
 
 Now give the Spark-shell a test:
 
-    > spark-shell --num-executors 4 --executor-cores 2 --executor-memory 2G
+    > spark-shell --num-executors 4 --executor-cores 1 --executor-memory 1G
 
 Read in the data and run a simple query that calculates the number of purchases for each upc in the sample data:
 
@@ -67,17 +67,28 @@ Read in the data and run a simple query that calculates the number of purchases 
     val upcCounts = upcs.map(upc => (upc, 1)).reduceByKey((a, b) => a + b)
     upcCounts.take(10)
 
+Note that for your "production" run on the full dataset you might want to increase resources used on the cluster:
+
+    --num-executors 4 --executor-cores 4 --executor-memory 4G
+
+Keep in mind that a spark-shell takes up these resources even when you do not use them so please do not keep a spark-shell open unused.  
+
 ## pySpark
 
 You can also do the same query using a python version of the Spark shell.
 
-    > pyspark --num-executors 4 --executor-cores 2 --executor-memory 2G
+    > pyspark --num-executors 4 --executor-cores 1 --executor-memory 1G
 
     dataRDD = sc.textFile("/data/customer_sample")
     upcs = dataRDD.map(lambda line: line.split('|')[12])
     upcCounts = upcs.map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
     upcCounts.take(10)
 
+Note that for your "production" run on the full dataset you might want to increase resources used on the cluster:
+
+    --num-executors 4 --executor-cores 4 --executor-memory 4G
+
+Keep in mind that a spark-shell takes up these resources even when you do not use them so please do not keep a spark-shell open unused.  
 
 ## Scalding
 
