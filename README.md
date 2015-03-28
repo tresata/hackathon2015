@@ -58,7 +58,7 @@ You can then extract the table from the hive warehouse:
 
 Now give the Spark-shell a test:
 
-    > spark-shell --num-executors 4 --executor-cores 4 --executor-memory 4G
+    > spark-shell --num-executors 4 --executor-cores 2 --executor-memory 2G
 
 Read in the data and run a simple query that calculates the number of purchases for each upc in the sample data:
 
@@ -71,7 +71,7 @@ Read in the data and run a simple query that calculates the number of purchases 
 
 You can also do the same query using a python version of the Spark shell.
 
-    > pyspark --num-executors 4 --executor-cores 4 --executor-memory 4G
+    > pyspark --num-executors 4 --executor-cores 2 --executor-memory 2G
 
     dataRDD = sc.textFile("/data/sample")
     upcs = dataRDD.map(lambda line: line.split('|')[12])
