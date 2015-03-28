@@ -3,6 +3,10 @@ hackathon 2015
 
 Welcome to hackathon 2015!
 
+Download the kickoff deck for more information on the business problem, the hackathon agenda, the data, and more! Find it in the data folder:
+
+    [Hackathon 2015 kickoff deck](http://www.github.com/tresata/hackathon2015/data/hackathon_kickoff_deck2015.pdf)
+
 ## Machines
 
 We have a Hadoop cluster with one master and four slaves. The slaves have sixteen cores, 15 1TB data drives, and 128GB of RAM. You will have ssh access to the slaves.
